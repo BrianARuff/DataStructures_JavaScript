@@ -5,9 +5,9 @@ let binaryString = "";
 
 function decToBin(num) {
     while(num > 0) {
-        let rem = Math.floor(num % 10);
+        let rem = Math.floor(num % 2);
         stack.push(rem);
-        num = Math.floor(num / 10);
+        num = Math.floor(num / 2);
     }
 
     stack.print()
