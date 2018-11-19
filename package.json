@@ -1,0 +1,11 @@
+{
+  "name": "18",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/BrianARuff/DataStructures_JavaScript.git",
+  "author": "BrianARuff <thelonewolf198927@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node": "^11.1.0"
+  }
+}
