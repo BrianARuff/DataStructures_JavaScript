@@ -5,3 +5,5 @@
     - Base Converter Algorithm
 
 - Queues
+        - Default Queue
+        - Priority Queue
