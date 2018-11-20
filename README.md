@@ -1,4 +1,5 @@
 # DataStructures_JavaScript
 
 - Stacks
- - Decimal to Binary Algorithm
+    - Decimal to Binary Algorithm
+    - Base Converter Algorithm
