@@ -10,8 +10,6 @@ function decToBin(num) {
         num = Math.floor(num / 2);
     }
 
-    stack.print()
-
     while(!stack.isEmpty()) {
         binaryString += String(stack.pop());
     }
