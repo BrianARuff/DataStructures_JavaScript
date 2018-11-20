@@ -6,6 +6,7 @@
   "author": "BrianARuff <thelonewolf198927@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "array-sort": "^1.0.0",
     "node": "^11.1.0"
   }
 }
