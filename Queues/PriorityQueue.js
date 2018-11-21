@@ -1,25 +1,36 @@
-const PriorityQueue = (() => {
-    const items = new WeakMap();
-    return class PriorityQueue {
-        constructor() {
-            items.set(this, []);
+class PriorityQueue {
+    constructor() {
+        this.queue = [];
+    }
+    enqueue(item, priority) {
+        // this.queue.push({item, priority});
+        // this.queue.sort((a, b) => a.priority - b.priority)
+        let added = false;
+        for (let i = 0; i < this.queue.length; i++) {
+            if (priority < this.queue[i].priority) {
+                this.queue.splice(i, 0, { item, priority });
+                added = true;
+                break;
+            }
         }
-
-        enqueue(item, urgencyLevel) {
-            items
-                .get(this)
-                .push({
-                    element: item,
-                    priority: urgencyLevel
-                });
-            // I decided to use JS built in .sort() here. In V8 it uses insertion sort if <= 10 items, and quicksort is greater than 10 items.
-            // Mozilla at some point used mergeSort()... If this were purely integers I might consider Radix sorting.
-            items.get(this).sort((a,b) => a.priority - b.priority);
+        if (!added) {
+            this.queue.push({ item, priority });
         }
-    };
-})();
+    }
+    dequeue() {
+        return this.queue.shift();
+    }
+    print() {
+        for (let i = 0; i < this.queue.length; i++) {
+            console.log(this.queue[i]);
+        }
+    }
+}
 
 const pq = new PriorityQueue();
-for(let i = 0; i < 100000; i++) {
-    pq.enqueue(String(Math.random() * 10000), Math.floor(Math.random() * 5));
-}
+pq.enqueue("Brian", 1);
+pq.enqueue("Shawn", 2);
+pq.enqueue("Doris", 3);
+pq.enqueue("Mahayla", 0);
+pq.enqueue("Logan", 0);
+pq.print();
