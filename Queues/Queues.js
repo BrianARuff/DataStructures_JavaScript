@@ -31,13 +31,4 @@ const Queue = (() => {
     };
 })();
 
-const q = new Queue();
-q.enqueue("Brian");
-q.enqueue("Johnny");
-q.enqueue("Chris");
-// console.log(q.dequeue());
-console.log(q.size());
-// q.dequeue();
-console.log(q.isEmpty());
-console.log(q.front());
-q.print()
+module.exports = Queue;
