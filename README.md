@@ -7,3 +7,4 @@
 - Queues
     - Default Queue
     - Priority Queue
+    - Circular Queue
