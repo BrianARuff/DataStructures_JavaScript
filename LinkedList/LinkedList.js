@@ -13,10 +13,12 @@ class LinkedList {
             this.head = new Node(element);
             // If it's not the first node then set the current node value to the current_node's next value untill the current node's next value is null.
         } else {
-            let curr_node = this.head;
-            while (curr_node.next) {
-                curr_node = curr_node.next;
+            let curr = this.head;
+            let newNode = new Node(element);
+            while(curr.next) {
+                curr = curr.next;
             }
+            curr.next = newNode;
         }
         // Increment length everytime an element is appended to the end of the linked list.
         this.length += 1;
@@ -71,10 +73,18 @@ class LinkedList {
         console.log("Length: " + this.length);
     }
     toString() {}
-    print() {}
+    print() {
+        let curr = this.head;
+        while(curr.next) {
+            console.log(curr.element);
+            curr = curr.next;
+        }
+    }
 }
 
 let ll = new LinkedList();
 ll.append(15);
 ll.append(10);
+ll.append(20);
 ll.size();
+ll.print();
