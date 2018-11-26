@@ -8,3 +8,6 @@
     - Default Queue
     - Priority Queue
     - Circular Queue
+
+- Linked List
+    - Default Linked List
