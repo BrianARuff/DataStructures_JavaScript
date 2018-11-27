@@ -11,3 +11,6 @@
 
 - Linked List
     - Default Linked List
+
+- Graphs
+    - Default Graph with Vertices
