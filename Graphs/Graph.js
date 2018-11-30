@@ -16,9 +16,9 @@ class Graph {
     add_vertex(name) {
         this.vertices.push(new Vertex(name));
     }
-    add_edge(vert, edge) {
+    add_edge(vert_name, edge) {
         this.vertices.forEach(v => {
-            if(v.name === vert) {
+            if(v.name === vert_name) {
                 return v.edges.push(edge);
             }
         })
@@ -33,4 +33,6 @@ g = new Graph("Graph");
 g.add_vertex("McAdenville")
 g.add_vertex("Cramerton")
 g.add_edge("McAdenville", "Cramerton");
+g.add_edge("Cramerton", "Charlotte");
+g.add_edge("Cramerton", "McAdenville");
 g.print()
