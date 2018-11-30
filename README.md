@@ -14,3 +14,6 @@
 
 - Graphs
     - Default Graph with Vertices
+
+- Algortithms
+    - Quicksort
